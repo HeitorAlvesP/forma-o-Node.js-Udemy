@@ -7,10 +7,20 @@
 </head>
 
 <style>
+
     body{
         background-color: black;
         color: rgb(212, 212, 212);
     }
+
+    .error{
+        color: rgb(188, 2, 2);
+    }
+
+    .NOerror{
+        color: green;
+    }
+
 </style>
 
 <body>
@@ -22,7 +32,19 @@
     <p> Nome: <%= nome %> </p>
     <p> Linguagem favorita: <%= lang %>  </p>
     <p> Empresa: <%= empresa %>  </p>
-    
+
+    <!-- <% //if(msg === false){ %>
+        <h3 class="error">Isso é uma mensagem de erro!</h3>
+    <% //}else { %>
+        <h3 class="NOerror">Não a error</h3>
+    <% //} %> -->
+
+    <% produtos.forEach(function(produto) {%>
+        <hr>
+        <h3><%= produto.nome %></h3>
+        <h4><%= produto.preco %></h4>
+        <br>
+    <% }) %>
 
 </body>
 </html>
